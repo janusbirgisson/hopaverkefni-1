@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*** Allt meginmál notar open sans ***/
+html,
+input,
+select,
+button {
+  font-family: var(--font-family-base);
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/** „Til baka á forsíðu“ hlekkur **/
+.back {
+  margin-top: var(--spacing);
+}
+
+/** Meginmál og efni forsíðu **/
+main {
+  width: 100%;
+}
+
+/**
+     * notum þetta til að fá bil á milli eininga _almennt_
+     * en ekki að hver eining þurfi að huga að bili
+     */
+main > .content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+/* Stillingar */
+:root {
+  --font-size-base: 16px;
+  --font-size-headings: 1.5rem;
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space: calc(var(--gutter) * 1);
+  --vertical-space-large: calc(var(--gutter) * 1.5);
+  /* Hámarks og lágmarks breidd á efni */
+  --max-width: 1200px;
+  --min-width-image: 200px;
+  --max-width-image: 300px;
+  --max-width-footer-section: 250px;
+  /* Border breiddir */
+  --border-width: 1px;
+  --border-radius-regular: 5px;
+  --border-radius-image: 10px;
+  --border-regular: 1px solid #000; /* todo longhand */
+  --border-with-background: 4px solid #c9b;
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+  /* Breidd á efni með offset */
+  --width-offset: calc(100% - (2 * var(--offset)));
+  /* Litir */
+  /** Litir með nafni **/
+  --color-yellow: #f3dd99;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-purple: #ebd;
+  --color-purple-dark: #c9b;
+  /** Litir með notkun **/
+  --color-background-primary: var(--color-yellow);
+  --color-background-secondary: var(--color-purple);
+  --color-background-form: var(--color-white);
+  --color-border-with-background: var(--color-purple-dark);
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
+  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  /* Transitions */
+  --transition-time-short: 300ms;
+  --transition-time-long: 600ms;
+  --transition-timing-function: ease-in-out;
+}
+
+/** Cards **/
+.cards {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
+}
+
+.cards > .title {
+  width: 100%;
+  text-align: center;
+}
+
+.cards > .content {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
+}
+
+@media (width >= 700px) {
+  .cards > .content {
+    grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
+    grid-template-rows: auto;
+  }
+}
+/** Card **/
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (width >= 700px) {
+  .card {
+    grid-column: span 5;
+  }
+}
+.card > .image {
+  width: 100%;
+}
+
+.card > .image img {
+  display: block;
+  border-top-left-radius: var(--border-radius-regular);
+  border-top-right-radius: var(--border-radius-regular);
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.card > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  padding: calc(var(--spacing) / 2);
+  border: var(--border-regular);
+  border-top: 0;
+  border-bottom-left-radius: var(--border-radius-regular);
+  border-bottom-right-radius: var(--border-radius-regular);
+}
+
+/**
+       * notum nýja selectora! brotið niður
+       * .card            <- veljum öll .card
+       * :not(            <- nema, við viljum ef _ekki_...
+       *   :has(> .image) <- .image sem strangt barn .card
+       * )                <- endir á :not()
+       * > .content       <- sem er strax barn af .card
+       * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
+       */
+.card:not(:has(> .image)) > .content {
+  border: var(--border-regular);
+  border-radius: var(--border-radius-regular);
+}
+
+.card > .content > .text {
+  flex: 1;
+}
+
+.card > .content > .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+/*# sourceMappingURL=styles.css.map */
