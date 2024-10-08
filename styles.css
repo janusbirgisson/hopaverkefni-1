@@ -138,15 +138,14 @@ main > .content {
 
 .cards > .content {
   display: grid;
-  grid-template-rows: auto;
-  gap: var(--vertical-space);
-  justify-items: center;
-  width: 100%;
+  grid-template-columns: repeat(12, 1fr); /* Maintain 12-column grid */
+  gap: var(--gutter);
 }
 
 @media (width >= 700px) {
   .cards > .content {
-    grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gutter);
     grid-template-rows: auto;
   }
 }
@@ -159,7 +158,7 @@ main > .content {
 
 @media (width >= 700px) {
   .card {
-    grid-column: span 5;
+    grid-column: span 4;
   }
 }
 .card > .image {
@@ -211,6 +210,30 @@ main > .content {
   justify-content: space-between;
   gap: var(--spacing);
   margin-top: var(--spacing);
+}
+
+.wrapper {
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+@media (width >= 800px) {
+  .wrapper .wrapper-content {
+    display: grid;
+    gap: var(--gutter);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
