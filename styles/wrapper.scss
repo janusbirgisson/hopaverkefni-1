@@ -1,0 +1,24 @@
+.wrapper {
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+@media (width >= 800px) {
+  .wrapper .wrapper-content {
+    display: grid;
+    gap: var(--gutter);
+  }
+}
