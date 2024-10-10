@@ -1,0 +1,48 @@
+.wrapper-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-background-secondary);
+    margin-bottom: 6cqh;
+}
+
+
+.intro{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: var(--max-width);
+    
+
+}
+
+.intro-description{
+   display: flex;
+   width: 552px;
+   font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+       
+}
+
+.intro-description p:first-of-type{
+    font-size: 16px;
+    color: var(--color-brown);
+    font-family:  var( --font-family-base);
+
+}
+
+.intro-description p {
+    line-height: 2;
+    font-family:  var( --font-family-base);
+    color: var(  --color-light-gray);
+}
+
+
+.intro-description h1{
+    font-size: 60px;
+    
+
+}
