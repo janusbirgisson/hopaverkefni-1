@@ -29,6 +29,7 @@ html {
 }
 
 /*** Allt meginmál notar open sans ***/
+p,
 html,
 input,
 select,
@@ -88,12 +89,17 @@ main > .content {
   --min-width-image: 409px;
   --max-width-image: 300px;
   --max-width-footer-section: 250px;
+  --max-navigation-height: 130px;
   /* Border breiddir */
   --border-width: 1px;
   --border-radius-regular: 5px;
   --border-radius-image: 10px;
   --border-regular: 1px solid #000; /* todo longhand */
+  --border-button: 1px solid var(--color-brown);
   --border-with-background: 4px solid #c9b;
+  /* Button settings */
+  --button-width: 250px;
+  --button-height: 52px;
   /* Grid stillingar */
   --columns: 12;
   --gutter: 30px;
@@ -102,19 +108,21 @@ main > .content {
   --width-offset: calc(100% - (2 * var(--offset)));
   /* Litir */
   /** Litir með nafni **/
-  --color-grey: #FAFAFA;
-  --color-brown: #E3CDB1;
-  --color-white: #FFFFFF;
+  --color-grey: #fafafa;
+  --color-brown: #e3cdb1;
+  --color-white: #ffffff;
   --color-black: #000;
-  --color-beige: #F7F1EB;
+  --color-beige: #f7f1eb;
+  --color-light-gray: #5e5b69;
+  --color-text-gray: #9b9b9b;
   /** Litir með notkun **/
   --color-background-primary: var(--color-white);
-  --color-background-secondary: var(--color-brown);
+  --color-background-secondary: var(--color-grey);
   --color-background-book: var(--color-beige);
   /* Letur stillingar */
   --font-base-size: 1rem;
-  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
-  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  --font-family-base: "Poppins", arial, helvetica, sans-serif;
+  --font-family-heading: "PlayfairDisplay-Regular", "MS comic Sans", cursive;
   /* Transitions */
   --transition-time-short: 300ms;
   --transition-time-long: 600ms;
@@ -137,8 +145,10 @@ main > .content {
 
 .cards > .content {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* Maintain 12-column grid */
-  gap: var(--gutter);
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
 }
 
 @media (width >= 700px) {
@@ -179,8 +189,7 @@ main > .content {
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
-  gap: var(--spacing);
-  padding: calc(var(--spacing) / 2);
+  padding: var(--spacing);
   border-top: 0;
 }
 
@@ -206,7 +215,7 @@ main > .content {
   display: flex;
   justify-content: space-between;
   gap: var(--spacing);
-  margin-top: var(--spacing);
+  vertical-align: middle;
 }
 
 .wrapper {
@@ -216,18 +225,36 @@ main > .content {
   grid-template-columns: 100%;
   /* grid items eru miðjuð */
   justify-items: center;
-  gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
 }
 
 .wrapper .wrapper-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-background-secondary);
+  margin-bottom: 6cqh;
+}
+
+@media (width >= 800px) {
+  .wrapper .wrapper-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-background-secondary);
+    margin-bottom: 6cqh;
+  }
+}
+.wrapper .wrapper-main {
   width: var(--width-offset);
   max-width: var(--max-width);
 }
 
 @media (width >= 800px) {
-  .wrapper .wrapper-content {
+  .wrapper .wrapper-main {
     display: grid;
     gap: var(--gutter);
   }
@@ -341,6 +368,16 @@ main > .content {
   color: var(--color-white);
 }
 
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family-base);
+  justify-content: center;
+  color: var(--color-brown);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
 /*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
 @font-face {
   font-family: PlayfairDisplay-Regular;
@@ -348,6 +385,10 @@ main > .content {
   font-weight: 400;
   font-display: swap;
   src: url("./fonts/PlayfairDisplay-Regular.ttf") format("woff2");
+}
+.card-text {
+  font-size: 14px;
+  color: var(--color-text-gray);
 }
 
 /*# sourceMappingURL=styles.css.map */

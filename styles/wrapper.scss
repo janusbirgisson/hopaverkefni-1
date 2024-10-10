@@ -11,12 +11,32 @@
 }
 
 .wrapper .wrapper-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-background-secondary);
+  margin-bottom: 6cqh;
+}
+
+@media (width >= 800px) {
+  .wrapper .wrapper-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-background-secondary);
+    margin-bottom: 6cqh;
+  }
+}
+
+.wrapper .wrapper-main {
   width: var(--width-offset);
   max-width: var(--max-width);
 }
 
 @media (width >= 800px) {
-  .wrapper .wrapper-content {
+  .wrapper .wrapper-main {
     display: grid;
     gap: var(--gutter);
   }
