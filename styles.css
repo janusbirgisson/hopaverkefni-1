@@ -232,5 +232,122 @@ main > .content {
     gap: var(--gutter);
   }
 }
+.wrapper-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: var(--max-navigation-height);
+  background-color: var(--color-background-secondary);
+}
+
+.navigation {
+  display: flex;
+  width: var(--max-width);
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .navigation {
+    margin: 0 var(--spacing);
+  }
+}
+
+.navigation > ul {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+}
+@media (max-width: 600px) {
+  .navigation > ul {
+    display: none;
+  }
+}
+
+.navigation > ul li a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu-icon {
+  display: none;
+}
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+.wrapper-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-background-secondary);
+  margin-bottom: 6cqh;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  width: var(--max-width);
+}
+
+.intro-description {
+  display: flex;
+  width: 552px;
+  font-size: 18px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.intro-description p:first-of-type {
+  font-size: 16px;
+  color: var(--color-brown);
+  font-family: var(--font-family-base);
+}
+
+.intro-description p {
+  line-height: 2;
+  font-family: var(--font-family-base);
+  color: var(--color-light-gray);
+}
+
+.intro-description h1 {
+  font-size: 60px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family-base);
+  justify-content: center;
+  border: var(--border-button);
+  border-width: var(--border-width);
+  width: var(--button-width);
+  height: var(--button-height);
+  color: var(--color-brown);
+  font-size: 1rem;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--color-background-secondary) 50%, var(--color-brown) 50%);
+  background-size: 200% 50%;
+  background-position: 0 0;
+  transition: background-position var(--transition-time-short) var(--transition-timing-function), color var(--transition-time-short) var(--transition-timing-function), border-color var(--transition-time-short) var(--transition-timing-function);
+}
+
+.button:hover {
+  background-position: -100% 0;
+  color: var(--color-white);
+}
+
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  font-family: PlayfairDisplay-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/PlayfairDisplay-Regular.ttf") format("woff2");
+}
 
 /*# sourceMappingURL=styles.css.map */

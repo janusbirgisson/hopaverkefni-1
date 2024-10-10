@@ -4,6 +4,7 @@
   --font-size-base: 16px;
   --font-size-headings: 1.5rem;
 
+
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
 
@@ -13,17 +14,23 @@
 
   /* Hámarks og lágmarks breidd á efni */
   --max-width: 1600px;
-
   --min-width-image: 409px;
   --max-width-image: 300px;
   --max-width-footer-section: 250px;
+  --max-navigation-height: 130px;
 
   /* Border breiddir */
   --border-width: 1px;
   --border-radius-regular: 5px;
   --border-radius-image: 10px;
   --border-regular: 1px solid #000; /* todo longhand */
+  --border-button: 1px solid var(--color-brown);
   --border-with-background: 4px solid #c9b;
+
+  /* Button settings */
+
+  --button-width: 250px;
+  --button-height: 52px;
 
   /* Grid stillingar */
   --columns: 12;
@@ -41,16 +48,17 @@
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-beige: #F7F1EB;
+  --color-light-gray: #5E5B69;
 
   /** Litir með notkun **/
   --color-background-primary: var(--color-white);
-  --color-background-secondary: var(--color-brown);
+  --color-background-secondary: var(--color-grey);
   --color-background-book: var(--color-beige);
 
   /* Letur stillingar */
   --font-base-size: 1rem;
-  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
-  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  --font-family-base: "Poppins", arial, helvetica, sans-serif;
+  --font-family-heading: "PlayfairDisplay-Regular", "MS comic Sans", cursive;
 
   /* Transitions */
   --transition-time-short: 300ms;
