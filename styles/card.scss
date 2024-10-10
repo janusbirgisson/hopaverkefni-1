@@ -6,12 +6,6 @@
   width: 100%;
 }
 
-@media (width >= 700px) {
-  .card {
-    grid-column: span 4;
-  }
-}
-
 .card > .image {
   width: 100%;
 }
