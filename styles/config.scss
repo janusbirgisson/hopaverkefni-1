@@ -4,7 +4,6 @@
   --font-size-base: 16px;
   --font-size-headings: 1.5rem;
 
-
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
 
@@ -43,12 +42,13 @@
   /* Litir */
 
   /** Litir með nafni **/
-  --color-grey: #FAFAFA;
-  --color-brown: #E3CDB1;
-  --color-white: #FFFFFF;
+  --color-grey: #fafafa;
+  --color-brown: #e3cdb1;
+  --color-white: #ffffff;
   --color-black: #000;
-  --color-beige: #F7F1EB;
-  --color-light-gray: #5E5B69;
+  --color-beige: #f7f1eb;
+  --color-light-gray: #5e5b69;
+  --color-text-gray: #9b9b9b;
 
   /** Litir með notkun **/
   --color-background-primary: var(--color-white);
