@@ -1,26 +1,39 @@
 .button {
-    display: inline-flex;
-    align-items: center;  
-    font-family:  var( --font-family-base);
-    justify-content: center; 
-    border: var(--border-button);
-    border-width: var(--border-width);
-    width: var(--button-width);
-    height: var(--button-height);
-    color: var(--color-brown);
-    font-size: 1rem;
-    text-decoration: none;
-    background: linear-gradient(90deg, var(--color-background-secondary) 50%, var(--color-brown) 50%); 
-    background-size: 200% 50%; 
-    background-position: 0 0; 
-    transition: background-position var(--transition-time-short) var(--transition-timing-function),
-                color var(--transition-time-short) var(--transition-timing-function),
-                border-color var(--transition-time-short) var(--transition-timing-function);
-
-    
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family-base);
+  justify-content: center;
+  border: var(--border-button);
+  border-width: var(--border-width);
+  width: var(--button-width);
+  height: var(--button-height);
+  color: var(--color-brown);
+  font-size: 1rem;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    var(--color-background-secondary) 50%,
+    var(--color-brown) 50%
+  );
+  background-size: 200% 50%;
+  background-position: 0 0;
+  transition: background-position var(--transition-time-short)
+      var(--transition-timing-function),
+    color var(--transition-time-short) var(--transition-timing-function),
+    border-color var(--transition-time-short) var(--transition-timing-function);
 }
 
 .button:hover {
-    background-position: -100% 0; 
-    color: var(--color-white); 
+  background-position: -100% 0;
+  color: var(--color-white);
+}
+
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family-base);
+  justify-content: center;
+  color: var(--color-brown);
+  font-size: 1rem;
+  text-decoration: none;
 }
