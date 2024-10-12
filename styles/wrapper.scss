@@ -24,6 +24,7 @@
   );
   background-color: var(--color-background-secondary);
   margin-bottom: 6cqh;
+  padding-top: calc(var(--spacing) * 3);
 }
 
 .wrapper .wrapper-main {
@@ -31,7 +32,7 @@
   max-width: var(--max-width);
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing) * 3);
+  gap: calc(var(--spacing) * 2);
   padding-bottom: calc(var(--spacing) * 3);
 }
 
