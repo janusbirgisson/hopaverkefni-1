@@ -1,0 +1,141 @@
+/** Fótur **/
+
+footer {
+  display: grid;
+  width: 100%;
+  height: var(--max-height-footer);
+  @media (max-width: 1500px) {
+    display: flex;
+    flex-direction: column;  /* Stack the content vertically */
+   } 
+}
+
+.newsletter {
+  display: grid;
+  background-color: var(--color-background-footer);
+  justify-content: center;
+  color: var(--color-white);
+
+  @media (max-width: 1500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--vertical-space);
+
+   
+   } 
+}
+
+.wrapper-newsletter {
+  display: grid;
+  width: var(--max-width);
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 1500px) {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: var(--spacing);
+
+ @media (max-width: 1500px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing);
+  width: 100%;  
+}
+} 
+}
+
+.newsletter-desc {
+  display: grid;
+  align-content: center;
+
+
+  @media (max-width: 1500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing);
+  }
+
+}
+
+.newsletter-desc:first-of-type p{
+  color: var(--color-brown);
+}
+
+.newsletter-desc h1{
+  font-size: 2.5rem;
+}
+
+
+
+
+
+.newsletter-subsc {
+  display: flex;
+  grid-column: 2;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing);
+  }
+}
+
+
+
+.newsletter-subsc form{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+
+.newsletter-subsc input{
+  background-color: var(--color-background-footer);
+  color: var(--color-white);
+  height: var(--button-height);
+  font-size: 1.375rem;
+  border: none;
+  border-bottom: var(--border-button);
+  width: calc(var(--max-width-footer-section)*1.25);
+}
+
+.newsletter-subsc input::placeholder{
+font-size: 1.375rem;
+color: var(--color-white);
+font-family: var(--font-family-heading);
+font-weight: bold;
+}
+
+footer .button {
+  background: linear-gradient(90deg, var(--color-background-footer) 50%, var(--color-brown) 50%);
+  background-size: 200% 50%;
+  background-position: 0 0;
+}
+
+footer .button:hover {
+  background-position: -100% 0;
+  color: var(--color-black);
+}
+
+
+footer .social-media{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-social-media{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing);
+}
