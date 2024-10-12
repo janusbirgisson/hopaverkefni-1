@@ -8,3 +8,11 @@
   grid-template-columns: repeat(auto-fit, minmax(409px, 1fr));
   justify-items: center;
 }
+
+@media (max-width: 887px) {
+  .card:nth-child(4),
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    display: none;
+  }
+}
