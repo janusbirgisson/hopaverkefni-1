@@ -218,6 +218,7 @@ main > .content {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: linear-gradient(to bottom, var(--color-background-primary) 0%, var(--color-background-primary) 33%, var(--color-background-secondary) 33%, var(--color-background-secondary) 100%);
   background-color: var(--color-background-secondary);
   margin-bottom: 6cqh;
 }
@@ -227,7 +228,8 @@ main > .content {
   max-width: var(--max-width);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing);
+  gap: calc(var(--spacing) * 3);
+  padding-bottom: calc(var(--spacing) * 3);
 }
 
 .grid-title {
@@ -239,7 +241,27 @@ main > .content {
 .grid-title-main {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-title-main-text {
+  display: flex;
+  flex-direction: row;
   gap: calc(var(--spacing) / 2);
+}
+
+.grid-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: calc(var(--spacing) * 5);
+}
+
+.see-more-line {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid #e7e7e7;
 }
 
 .wrapper-nav {
@@ -362,6 +384,12 @@ main > .content {
   color: var(--color-brown);
   font-size: 1rem;
   text-decoration: none;
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  margin-right: calc(var(--spacing) * 0.5);
+  width: auto;
 }
 
 /*** Leturgerðir sem við sækjum úr fonts/ möppu ***/

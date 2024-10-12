@@ -38,3 +38,9 @@
   font-size: 1rem;
   text-decoration: none;
 }
+
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: calc(var(--spacing) * 0.5);
+  width: auto;
+}
