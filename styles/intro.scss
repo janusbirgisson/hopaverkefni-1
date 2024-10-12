@@ -24,17 +24,16 @@
 }
 
 .intro-description p:first-of-type {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-brown);
-  font-family: var(--font-family-base);
 }
 
 .intro-description p {
   line-height: 2;
-  font-family: var(--font-family-base);
   color: var(--color-light-gray);
+  font-size: 1.125rem;
 }
 
 .intro-description h1 {
-  font-size: 60px;
+  font-size: 3.75rem;
 }
