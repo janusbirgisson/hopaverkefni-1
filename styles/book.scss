@@ -1,0 +1,105 @@
+.wrapper-book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    var(--color-background-book) 0%,
+    var(--color-background-book) 90%,
+    var(--color-background-primary) 90%,
+    var(--color-background-primary) 100%
+  );
+  margin-bottom: var(--spacing-large);
+  @media (max-width: 887px) {
+    background: linear-gradient(
+      to bottom,
+      var(--color-background-book) 0%,
+      var(--color-background-book) 80%,
+      var(--color-background-primary) 80%,
+      var(--color-background-primary) 100%
+    );
+  }
+}
+
+.book {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: var(--max-width);
+  margin-top: var(--spacing-large);
+
+  @media (max-width: 887px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.book-description {
+  line-height: 2;
+  margin-right: var(--spacing);
+
+  @media (max-width: 887px) {
+    margin: 0px var(--spacing-medium) var(--spacing-large) var(--spacing-medium);
+
+    gap: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.book-description p:first-of-type {
+  font-size: 1rem;
+  color: var(--color-brown);
+
+  @media (max-width: 887px) {
+    display: none;
+  }
+}
+
+.book-description p {
+  line-height: 2;
+  color: var(--color-light-gray);
+  font-size: 1.25rem;
+}
+
+.book-description p:nth-child(3) {
+  display: none;
+  @media (max-width: 887px) {
+    display: contents;
+  }
+}
+
+.book-description p:last-of-type {
+  @media (max-width: 887px) {
+    display: none;
+  }
+}
+
+.book-description h1 {
+  font-size: 2.5rem;
+}
+
+.book-description .button {
+  margin-top: 2rem;
+  max-width: var(--button-width);
+  width: 100%;
+  @media (max-width: 887px) {
+    margin: 0;
+  }
+}
+
+.book-img {
+  display: flex;
+  justify-content: center;
+  @media (max-width: 887px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px var(--spacing-large) var(--spacing-medium) var(--spacing-large);
+  }
+}
+
+.book-img img {
+  filter: drop-shadow(-35px 20px 4px rgba(151, 151, 151, 0.1));
+}

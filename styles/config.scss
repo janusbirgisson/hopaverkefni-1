@@ -6,13 +6,14 @@
 
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
-
+  --spacing-medium: 3rem;
+  --spacing-large: 6rem;
   /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
   --vertical-space: calc(var(--gutter) * 1);
   --vertical-space-large: calc(var(--gutter) * 1.5);
 
   /* Hámarks og lágmarks breidd á efni */
-  --max-width: 1600px;
+  --max-width: 1290px;
   --min-width-image: 409px;
   --max-width-image: 300px;
   --max-width-footer-section: 250px;
