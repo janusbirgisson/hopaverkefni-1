@@ -4,6 +4,7 @@
   gap: calc(var(--spacing) * 10);
   width: var(--width-offset);
   max-width: var(--max-width);
+  margin-bottom: var(--spacing-large);
 }
 
 @media (max-width: 887px) {
@@ -19,6 +20,22 @@
   gap: calc(var(--spacing) * 2);
 }
 
+.ingredients-container:first-of-type {
+  flex: 1;
+}
+.ingredients-container {
+  flex: 5;
+}
+
+.ingredients-container p {
+  color: var(--color-light-gray);
+  font-family: "Poppins-Light";
+}
+
+.title-text-gray {
+  font-family: "PlayFairDisplay-Bold";
+  color: #d0d0d0;
+}
 .ingredients-list-container {
   display: flex;
   flex-direction: column;
@@ -29,10 +46,27 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
+  color: #9b9b9b;
+}
+
+.ingredients-list > p {
+  color: var(--color-black);
+  font-weight: 650;
 }
 
 .ingredients-item {
   display: flex;
   flex-direction: row;
   gap: var(--spacing);
+}
+
+.ingredients-item p:first-of-type {
+  color: var(--color-brown);
+  font-family: "PlayFairDisplay-Bold";
+  font-size: 2rem;
+}
+
+.ingredients-item p:nth-child(even) {
+  margin-top: auto;
+  width: 100%;
 }
