@@ -29,20 +29,6 @@
   border-top: 0;
 }
 
-/**
-       * notum nýja selectora! brotið niður
-       * .card            <- veljum öll .card
-       * :not(            <- nema, við viljum ef _ekki_...
-       *   :has(> .image) <- .image sem strangt barn .card
-       * )                <- endir á :not()
-       * > .content       <- sem er strax barn af .card
-       * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
-       */
-.card:not(:has(> .image)) > .content {
-  border: var(--border-regular);
-  border-radius: var(--border-radius-regular);
-}
-
 .card > .content > .text {
   flex: 1;
 }
@@ -52,4 +38,47 @@
   justify-content: space-between;
   gap: var(--spacing);
   vertical-align: middle;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-image {
+  position: relative;
+  width: 100%;
+}
+
+.video-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 205, 177, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  z-index: 2;
+  fill: white;
 }
