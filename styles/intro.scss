@@ -107,7 +107,8 @@
 }
 
 .intro-description,
-.intro-img {
+.intro-img,
+.recipe-intro-description {
   @media (max-width: 887px) {
     grid-column: 1;
   }

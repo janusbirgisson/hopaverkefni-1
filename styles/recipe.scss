@@ -14,6 +14,61 @@
   }
 }
 
+.recipe-intro-description {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  z-index: 2;
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+  grid-row: 1;
+  margin-right: 10rem;
+
+  @media (max-width: 887px) {
+    margin: var(--spacing);
+    text-align: center;
+    padding: 1rem;
+    justify-content: start;
+  }
+}
+
+.recipe-intro-description *:not(h1) {
+  align-items: flex-start;
+}
+
+.recipe-intro-description > p:first-of-type {
+  font-size: 1rem;
+  @media (min-width: 887px) {
+    display: none;
+  }
+}
+
+.recipe-intro-description p {
+  line-height: 2;
+  color: var(--color-light-gray);
+  font-size: 1.125rem;
+}
+
+.recipe-intro-description > p:last-of-type {
+  @media (max-width: 887px) {
+    display: none;
+  }
+}
+
+.recipe-intro-description h1 {
+  font-size: 3.75rem;
+}
+
+.characteristics {
+  display: flex;
+  gap: var(--spacing);
+  @media (max-width: 887px) {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
 .ingredients-container {
   display: flex;
   flex-direction: column;
