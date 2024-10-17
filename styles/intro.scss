@@ -144,8 +144,8 @@
 
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 100%
     ),
     url("../images/video-hero-image.png");
   background-size: cover;
@@ -198,6 +198,7 @@
   width: auto;
   height: auto;
   object-fit: none;
+  cursor: pointer;
 }
 
 @media (max-width: 887px) {
