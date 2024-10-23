@@ -1,0 +1,55 @@
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  font-family: PlayfairDisplay-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/PlayfairDisplay-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: PlayfairDisplay-Bold;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/PlayfairDisplay-Bold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: Poppins-Light;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Poppins-Light.ttf') format('woff2');
+}
+
+.card-text {
+  font-size: 14px;
+  color: var(--color-text-gray);
+}
+
+.title-text-gray {
+  color: var(--color-text-gray);
+}
+
+.extra-text {
+  font-size: 16px;
+  color: var(--color-brown);
+  font-family: var(--font-family-base);
+}

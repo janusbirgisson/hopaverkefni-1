@@ -1,0 +1,73 @@
+.wrapper {
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+
+  /* grid items eru miðjuð */
+  justify-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper .wrapper-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to bottom,
+  var(--color-background-primary) 0%,
+  var(--color-background-primary) 33%,
+  var(--color-background-secondary) 33%,
+  var(--color-background-secondary) 100%);
+  background-color: var(--color-background-secondary);
+}
+
+.wrapper .wrapper-main {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  padding-bottom: calc(var(--spacing) * 3);
+}
+
+.grid-title {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) / 4);
+}
+
+.grid-title-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (width <= 470px) {
+  .grid-title-main {
+    flex-direction: column;
+    align-items: start;
+    gap: var(--spacing);
+  }
+}
+
+.grid-title-main-text {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--spacing) / 2);
+}
+
+.grid-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: calc(var(--spacing) * 5);
+}
+
+.see-more-line {
+  flex-grow: 1;
+  border: 0;
+  border-top: 1px solid #e7e7e7;
+}

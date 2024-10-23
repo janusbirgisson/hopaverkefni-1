@@ -1,17 +1,22 @@
 /* Reiknum stærð á öllum boxum sem border-box */
 html {
   box-sizing: border-box;
+  font-size: 16px;
+
+  @media (width <= 750px) {
+    font-size: 12px;
+  }
 }
 
 /* og látum erfast á allt */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
-.sr-only:not(:focus):not(:active) {
+.sr-only:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -22,6 +27,7 @@ html {
 }
 
 /*** Allt meginmál notar open sans ***/
+p,
 html,
 input,
 select,

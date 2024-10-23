@@ -1,0 +1,139 @@
+/** Fótur **/
+
+footer {
+  display: grid;
+  width: 100%;
+  height: var(--max-height-footer);
+
+  @media (width <= 1346px) {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+  }
+}
+
+.newsletter {
+  display: grid;
+  background-color: var(--color-background-footer);
+  justify-content: center;
+  color: var(--color-white);
+  flex: 1;
+
+  @media (width <= 1346px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing);
+  }
+}
+
+.wrapper-newsletter {
+  display: grid;
+  width: var(--max-width);
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (width <= 1346px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-medium);
+    width: 100%;
+  }
+}
+
+.newsletter-desc {
+  display: grid;
+  align-content: center;
+
+  @media (width <= 1346px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing);
+  }
+}
+
+.newsletter-desc p:nth-child(1) {
+  color: var(--color-brown);
+
+  @media (width <= 1346px) {
+    display: none;
+  }
+}
+
+.newsletter-desc p:nth-child(2) {
+  color: var(--color-brown);
+
+  @media (width >= 1346px) {
+    display: none;
+  }
+}
+
+.newsletter-desc h1 {
+  font-size: 1.65rem;
+}
+
+.newsletter-subsc {
+  display: flex;
+  grid-column: 2;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (width <= 1346px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing);
+  }
+}
+
+.newsletter-subsc form {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 21rem;
+}
+
+.newsletter-subsc input {
+  background-color: var(--color-background-footer);
+  color: var(--color-white);
+  height: var(--button-height);
+  font-size: 1.375rem;
+  border: 0;
+  border-bottom: var(--border-button);
+}
+
+.newsletter-subsc input::placeholder {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  font-family: var(--font-family-heading);
+  font-weight: bold;
+}
+
+footer .button {
+  width: 100%;
+  max-width: 16rem;
+}
+
+footer .button:hover {
+  background-position: -100% 0;
+  color: var(--color-black);
+}
+
+footer .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.wrapper-social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing);
+}

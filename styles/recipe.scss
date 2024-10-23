@@ -1,0 +1,134 @@
+.recipe-container {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--spacing) * 10);
+  width: var(--width-offset);
+  max-width: var(--max-width);
+  margin-bottom: var(--spacing-large);
+}
+
+@media (width <= 887px) {
+  .recipe-container {
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+  }
+}
+
+.recipe-intro-description {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  z-index: 2;
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+  grid-row: 1;
+  margin-right: 10rem;
+
+  @media (width <= 887px) {
+    margin: var(--spacing);
+    text-align: center;
+    padding: 1rem;
+    justify-content: start;
+  }
+}
+
+.recipe-intro-description *:not(h1) {
+  align-items: flex-start;
+}
+
+.recipe-intro-description p {
+  line-height: 2;
+  color: var(--color-light-gray);
+  font-size: 1.125rem;
+}
+
+.recipe-intro-description h1 {
+  font-size: 3.75rem;
+}
+
+.ingredients-container p {
+  color: var(--color-light-gray);
+  font-family: Poppins-Light, sans-serif;
+}
+
+.ingredients-list > p {
+  color: var(--color-black);
+  font-weight: 650;
+}
+
+.recipe-intro-description > p:first-of-type {
+  font-size: 1rem;
+
+  @media (width >= 887px) {
+    display: none;
+  }
+}
+
+.recipe-intro-description > p:last-of-type {
+  @media (width <= 887px) {
+    display: none;
+  }
+}
+
+
+.characteristics {
+  display: flex;
+  gap: var(--spacing);
+
+  @media (width <= 887px) {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  flex: 5;
+}
+
+
+.ingredients-container:first-of-type {
+  flex: 1;
+}
+
+
+
+.title-text-gray {
+  font-family: PlayFairDisplay-Bold, sans-serif;
+  color: #d0d0d0;
+}
+
+.ingredients-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  color: #9b9b9b;
+}
+
+
+
+.ingredients-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing);
+}
+
+.ingredients-item p:first-of-type {
+  color: var(--color-brown);
+  font-family: PlayFairDisplay-Bold, sans-serif;
+  font-size: 2rem;
+}
+
+.ingredients-item p:nth-child(even) {
+  margin-top: auto;
+  width: 100%;
+}

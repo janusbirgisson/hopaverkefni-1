@@ -6,23 +6,33 @@
 
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
+  --spacing-medium: 3rem;
+  --spacing-large: 6rem;
 
   /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
   --vertical-space: calc(var(--gutter) * 1);
   --vertical-space-large: calc(var(--gutter) * 1.5);
 
   /* Hámarks og lágmarks breidd á efni */
-  --max-width: 1200px;
-  --min-width-image: 200px;
+  --max-width: 1290px;
+  --min-width-image: 409px;
   --max-width-image: 300px;
   --max-width-footer-section: 250px;
+  --max-navigation-height: 100px;
+  --max-height-footer: 670px;
 
   /* Border breiddir */
   --border-width: 1px;
   --border-radius-regular: 5px;
   --border-radius-image: 10px;
   --border-regular: 1px solid #000; /* todo longhand */
+  --border-button: 1px solid var(--color-brown);
   --border-with-background: 4px solid #c9b;
+
+  /* Button settings */
+
+  --button-width: 250px;
+  --button-height: 52px;
 
   /* Grid stillingar */
   --columns: 12;
@@ -35,22 +45,24 @@
   /* Litir */
 
   /** Litir með nafni **/
-  --color-yellow: #f3dd99;
+  --color-grey: #fafafa;
+  --color-brown: #e3cdb1;
   --color-white: #fff;
   --color-black: #000;
-  --color-purple: #ebd;
-  --color-purple-dark: #c9b;
+  --color-beige: #f7f1eb;
+  --color-light-gray: #5e5b69;
+  --color-text-gray: #9b9b9b;
 
   /** Litir með notkun **/
-  --color-background-primary: var(--color-yellow);
-  --color-background-secondary: var(--color-purple);
-  --color-background-form: var(--color-white);
-  --color-border-with-background: var(--color-purple-dark);
+  --color-background-primary: var(--color-white);
+  --color-background-secondary: var(--color-grey);
+  --color-background-book: var(--color-beige);
+  --color-background-footer: var(--color-black);
 
   /* Letur stillingar */
   --font-base-size: 1rem;
-  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
-  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  --font-family-base: 'Poppins-Regular', arial, helvetica, sans-serif;
+  --font-family-heading: 'PlayfairDisplay-Regular', 'MS comic Sans', cursive;
 
   /* Transitions */
   --transition-time-short: 300ms;
