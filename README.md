@@ -81,5 +81,5 @@ This will lint the `styles.scss` file and any other `.scss` files in subdirector
   GitHub Username: [AserKr](https://github.com/AserKr)
 
 - **Janus Bjarki Brigisson**  
-  HÍ email: `hiusername2`  
+  HÍ email: `jbb24@hi.is`  
   GitHub Username: [janusbirgisson](https://github.com/janusbirgisson)
