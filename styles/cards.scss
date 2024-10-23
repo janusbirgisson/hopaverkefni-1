@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 400px) {
+@media (width <= 400px) {
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -35,7 +35,7 @@
 .card:nth-child(19),
 .card:nth-child(20),
 .card:nth-child(21) {
-  @media (max-width: 887px) {
+  @media (width <= 887px) {
     display: none;
   }
 }

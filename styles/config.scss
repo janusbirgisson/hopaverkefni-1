@@ -8,6 +8,7 @@
   --spacing: 1rem;
   --spacing-medium: 3rem;
   --spacing-large: 6rem;
+
   /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
   --vertical-space: calc(var(--gutter) * 1);
   --vertical-space-large: calc(var(--gutter) * 1.5);
@@ -46,7 +47,7 @@
   /** Litir með nafni **/
   --color-grey: #fafafa;
   --color-brown: #e3cdb1;
-  --color-white: #ffffff;
+  --color-white: #fff;
   --color-black: #000;
   --color-beige: #f7f1eb;
   --color-light-gray: #5e5b69;
@@ -60,8 +61,8 @@
 
   /* Letur stillingar */
   --font-base-size: 1rem;
-  --font-family-base: "Poppins-Regular", arial, helvetica, sans-serif;
-  --font-family-heading: "PlayfairDisplay-Regular", "MS comic Sans", cursive;
+  --font-family-base: 'Poppins-Regular', arial, helvetica, sans-serif;
+  --font-family-heading: 'PlayfairDisplay-Regular', 'MS comic Sans', cursive;
 
   /* Transitions */
   --transition-time-short: 300ms;

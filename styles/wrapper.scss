@@ -15,13 +15,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    var(--color-background-primary) 0%,
-    var(--color-background-primary) 33%,
-    var(--color-background-secondary) 33%,
-    var(--color-background-secondary) 100%
-  );
+  background: linear-gradient(to bottom,
+  var(--color-background-primary) 0%,
+  var(--color-background-primary) 33%,
+  var(--color-background-secondary) 33%,
+  var(--color-background-secondary) 100%);
   background-color: var(--color-background-secondary);
 }
 
@@ -47,7 +45,7 @@
   align-items: center;
 }
 
-@media (max-width: 470px) {
+@media (width <= 470px) {
   .grid-title-main {
     flex-direction: column;
     align-items: start;
@@ -70,6 +68,6 @@
 
 .see-more-line {
   flex-grow: 1;
-  border: none;
+  border: 0;
   border-top: 1px solid #e7e7e7;
 }

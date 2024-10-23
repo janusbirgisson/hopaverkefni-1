@@ -14,7 +14,7 @@
   background-size: 200% 50%;
   background-position: 0 0;
   transition: background-position var(--transition-time-short)
-      var(--transition-timing-function),
+    var(--transition-timing-function),
     color var(--transition-time-short) var(--transition-timing-function),
     border-color var(--transition-time-short) var(--transition-timing-function);
 }
@@ -35,7 +35,7 @@
   text-decoration: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: inline-block;
   margin-right: calc(var(--spacing) * 0.5);
   width: auto;
